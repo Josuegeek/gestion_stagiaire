@@ -18,11 +18,13 @@
     <?php
     include("./enginePhp/showAlert.php");
     ?>
+
+    <!-- =============== Invisible Form ================ -->
     <div class="isjoverform2 isjform-hide">
         <div id="signupFrm" class="signupFrm">
             <div class="wrapper">
                 <form class="form" action="./enginePhp/encadreur_crud.php" method="POST">
-                    <div class="top-title">Ajouter un encadreur</div>
+                    <div id="form-title" class="top-title">Ajouter un encadreur</div>
                     <br>
                     <div class="row gap">
                         <b>ID :</b>
@@ -75,7 +77,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="./index.html">
                         <span class="icon">
                             <i class="ti-home"></i>
                         </span>
@@ -98,6 +100,15 @@
                             <i class="ti-layout-list-thumb"></i>
                         </span>
                         <span class="title">List et Gestion</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./encadreur.php">
+                        <span class="icon">
+                            <i class="ti-user"></i>
+                        </span>
+                        <span class="title">Les encadreurs</span>
                     </a>
                 </li>
 

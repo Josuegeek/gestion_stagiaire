@@ -58,14 +58,12 @@
     display: flex;
     align-items: center;
     position: relative;
-    height: 40px;
+    height: fit-content;
+    min-height: 40px;
     margin-bottom: 17px;
     margin-top: 10px;
 }
 .input {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     height: 100%;
     width: 100%;
     border: 1px solid var(--black1);
@@ -75,6 +73,7 @@
     outline: none;
     background: none;
     z-index: 1;
+    min-height: 40px;
 }
 .label {
     position: absolute;
@@ -94,6 +93,9 @@
     font-size: 14px;
     font-weight: 600;
     color: var(--blue);
+}
+textarea.input:not(:placeholder-shown)+ .label{
+    top: -20px;
 }
 .input:not(:placeholder-shown)+ .label {
     top: -7px;

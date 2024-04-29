@@ -60,6 +60,15 @@ if (session_status() != PHP_SESSION_ACTIVE) {
                 </li>
 
                 <li>
+                    <a href="./encadreur.php">
+                        <span class="icon">
+                            <i class="ti-user"></i>
+                        </span>
+                        <span class="title">Les encadreurs</span>
+                    </a>
+                </li>
+
+                <li>
                     <a href="#">
                         <span class="icon">
                             <i class="ti-power-off"></i>

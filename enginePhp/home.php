@@ -49,7 +49,7 @@ function getLastIndexOfEnc()
         } else {
             $num = 1;
         }
-
+        echo "<script>let STAGE_NUM=$num;</script>";
         return $num;
     } catch (Exception $ex) {
         $msg =  $ex->getMessage();

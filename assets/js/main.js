@@ -16,12 +16,48 @@ function activeLink() {
 let toggle = document.querySelector(".toggle");
 let navigation = document.querySelector(".navigation");
 let main = document.querySelector(".main");
+let menu = document.querySelector("#menu-toggle");
 
-toggle.onclick = function () {
+console.log(document.getElementById('closer'))
+
+document.getElementById("closer").addEventListener("click", (e)=>{
+  menuManaging();
+});
+
+toggle.addEventListener("click", (ev)=>{
+   menuManaging();
+})
+
+//function for close and open menu
+function menuManaging(){
+  console.log("menu")
   navigation.classList.toggle("active");
   main.classList.toggle("active");
-  topbar.classList.toggle("active")
-};
+  topbar.classList.toggle("active");
+  //console.log(document.querySelector(".ti-menu"), );
+  
+  //console.log(menu.classList.contains("ti-menu"));
+  
+  /*if(menu.classList.contains("ti-menu")){
+    menu.classList.remove("ti-menu");
+    menu.classList.add("ti-close");
+    toggle.classList.add("toggle-close");
+  }
+  else{
+    menu.classList.remove("ti-close");
+    menu.classList.add("ti-menu");
+    toggle.classList.remove("toggle-close");
+  }*/
+}
+
+document.addEventListener("click", (e)=>{
+  let check = e.target;
+  let drop = document.getElementById("dropdown-check");
+  //console.log(, );
+  if((check != drop)){
+    document.getElementById("dropdown-check").checked=false;
+  }
+});
 setTimeout(function() {
   document.getElementById("alert").style.display="none";
   console.log("Showing");

@@ -1,6 +1,6 @@
 <?php
-    include("./enginePhp/home.php");
-    //include("./enginePhp/getAllStage.php");
+include("./enginePhp/home.php");
+//include("./enginePhp/getAllStage.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,24 +15,23 @@
 </head>
 
 <body>
-    <?php 
-        include("./enginePhp/showAlert.php");
+    <?php
+    include("./enginePhp/showAlert.php");
     ?>
     <!-- =============== Navigation ================ -->
     <div class="container">
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="./index.html">
+                    <a href="#">
                         <span class="icon">
                             <i class="ti-layout-grid2-alt"></i>
                         </span>
-
                         <span class="title">Gestion des stagiaires</span>
                     </a>
                 </li>
 
-                <li >
+                <li>
                     <a href="#">
                         <span class="icon">
                             <i class="ti-home"></i>
@@ -46,7 +45,7 @@
                         <span class="icon">
                             <i class="ti-plus"></i>
                         </span>
-                        <span class="title">Ajouter un stagiaire</span>
+                        <span class="title">Ajouter un Stagiaire</span>
                     </a>
                 </li>
 
@@ -56,6 +55,15 @@
                             <i class="ti-layout-list-thumb"></i>
                         </span>
                         <span class="title">List et Gestion</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./encadreur.php">
+                        <span class="icon">
+                            <i class="ti-user"></i>
+                        </span>
+                        <span class="title">Les encadreurs</span>
                     </a>
                 </li>
 
@@ -151,7 +159,7 @@
                         </thead>
 
                         <tbody>
-                        <!--
+                            <!--
                             <tr>
                                 <td>Iswa Senteri Josué</td>
                                 <td>Informatique</td>

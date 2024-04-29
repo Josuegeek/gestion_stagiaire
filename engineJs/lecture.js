@@ -12,7 +12,7 @@ if (document.getElementById("searchBtn")) {
 
 let tbody = table.querySelector('tbody');
 // Définition de la méthode et de l'URL de la requête
-xhr.open("POST", "../enginePhp/getAllStage.php", true);
+xhr.open("POST", "./enginePhp/getAllStage.php", true);
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 let allStage = [], proStage = [], academicStage = [], finishedStage = [];
@@ -32,7 +32,7 @@ xhr.onload = function () {
             finishedStage = jsonObj.finishedStage;
 
             tbody.innerHTML = "";
-            console.log(allStage, proStage, academicStage, finishedStage);
+            //console.log(allStage, proStage, academicStage, finishedStage);
             let classi = "";
             for (let i = 0; i < allStage.length; i++) {
                 if (allStage[i].status.includes("En cours")) {
@@ -80,7 +80,7 @@ xhr.onload = function () {
         }
     }
     catch (e) {
-        new IsjAlert("Erreur", "Erreur de lecture dans la base des données, Veuillez Actualiser la page", "error", false).showIsjAlert();
+        alert("Erreur de lecture dans la base des données :" + e)
     }
 
 };

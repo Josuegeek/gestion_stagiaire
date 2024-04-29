@@ -72,11 +72,13 @@ xhr.onload = function () {
 
 function showForm(state) {
     if (state === 0) {
-        //document.getElementById("id").value = ""
-        document.getElementById("matricule").value = ""
-        document.getElementById("nom").value = ""
-        document.getElementById("fonction").value = ""
-        document.getElementById("dept").value = ""
+        document.getElementById("form-title").innerHTML = "Ajouter un encadreur";
+        document.getElementById("id").value = STAGE_NUM;
+        document.getElementById("idLbl").innerHTML = STAGE_NUM;
+        document.getElementById("matricule").value = "";
+        document.getElementById("nom").value = "";
+        document.getElementById("fonction").value = "";
+        document.getElementById("dept").value = "";
 
         showIsjForm2(0);
     }
@@ -142,6 +144,7 @@ function editEncadreur(id) {
                 let encadreur =  d.enc;
                 console.log(encadreur)
                 
+                document.getElementById("form-title").innerHTML = "Modifier l'encadreur";
                 document.getElementById("id").value = encadreur[0].idencadreur;
                 document.getElementById("idLbl").innerHTML = encadreur[0].idencadreur;
                 document.getElementById("matricule").value = encadreur[0].matricule;
