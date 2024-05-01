@@ -1,4 +1,4 @@
-<?php 
+<?php
 if (session_status() != PHP_SESSION_ACTIVE) {
     session_start();
 }
@@ -16,12 +16,13 @@ if (session_status() != PHP_SESSION_ACTIVE) {
 </head>
 
 <body>
-    <?php 
-        include("./enginePhp/showAlert.php");
+    <?php
+    include("./enginePhp/showAlert.php");
     ?>
     <!-- =============== Navigation ================ -->
     <div class="container">
         <div class="navigation">
+            <i id="closer" class="ti-close"></i>
             <ul>
                 <li>
                     <a href="#">
@@ -32,7 +33,7 @@ if (session_status() != PHP_SESSION_ACTIVE) {
                     </a>
                 </li>
 
-                <li >
+                <li>
                     <a href="index.php">
                         <span class="icon">
                             <i class="ti-home"></i>
@@ -118,15 +119,15 @@ if (session_status() != PHP_SESSION_ACTIVE) {
                         </thead>
 
                         <tbody>
-                            
+
                         </tbody>
                     </table>
                     <button style="align-self: center;margin-top: 30px;" class="btn"><a href="./form.php">Ajouter un nouveau</a></button>
                 </div>
 
-                
+
             </div>
-            
+
         </div>
     </div>
 

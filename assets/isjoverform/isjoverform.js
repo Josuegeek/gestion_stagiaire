@@ -18,7 +18,7 @@ function showIsjForm(form){
 function showIsjForm2(form,e){
     isjforms2[form].classList.remove("isjform-hide");
     isjforms2[form].classList.add("isjform-show");
-    document.getElementById("act").value=e;
+    /*document.getElementById("act").value=e;
 
     if(e=="prof"){
         document.getElementById("connexion-txt").innerHTML="Êtes-vous Professeur ?";
@@ -26,6 +26,7 @@ function showIsjForm2(form,e){
     else{
         document.getElementById("connexion-txt").innerHTML="Êtes-vous Etudiant ?"
     }
+    */
 }
 
 function closeIsjForm(form){

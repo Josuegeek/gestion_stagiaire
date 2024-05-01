@@ -3,12 +3,15 @@ let list = document.querySelectorAll(".navigation li"),
     typeSelect = document.getElementById("type"),
     topbar = document.querySelector(".topbar");
 
+
+/*
 function activeLink() {
   list.forEach((item) => {
     item.classList.remove("hovered");
   });
   this.classList.add("hovered");
 }
+*/
 
 //list.forEach((item) => item.addEventListener("mouseover", activeLink));
 
@@ -18,19 +21,11 @@ let navigation = document.querySelector(".navigation");
 let main = document.querySelector(".main");
 let menu = document.querySelector("#menu-toggle");
 
-console.log(document.getElementById('closer'))
-
-document.getElementById("closer").addEventListener("click", (e)=>{
-  menuManaging();
-});
-
-toggle.addEventListener("click", (ev)=>{
-   menuManaging();
-})
+//console.log(document.getElementById('closer'))
 
 //function for close and open menu
 function menuManaging(){
-  console.log("menu")
+  //console.log("menu")
   navigation.classList.toggle("active");
   main.classList.toggle("active");
   topbar.classList.toggle("active");
@@ -50,14 +45,28 @@ function menuManaging(){
   }*/
 }
 
+if(document.getElementById("closer"))
+document.getElementById("closer").addEventListener("click", (e)=>{
+  menuManaging();
+});
+
+if(toggle)
+toggle.addEventListener("click", (ev)=>{
+   menuManaging();
+});
+
+let drop = document.getElementById("dropdown-check");
+
+if(drop)
 document.addEventListener("click", (e)=>{
   let check = e.target;
-  let drop = document.getElementById("dropdown-check");
+  
   //console.log(, );
   if((check != drop)){
     document.getElementById("dropdown-check").checked=false;
   }
 });
+
 setTimeout(function() {
   document.getElementById("alert").style.display="none";
   console.log("Showing");

@@ -49,11 +49,11 @@ function getLastIndexOfEnc()
         } else {
             $num = 1;
         }
-        echo "<script>let STAGE_NUM=$num;</script>";
+        //echo "<script>let STAGE_NUM=$num;</script>";
         return $num;
     } catch (Exception $ex) {
         $msg =  $ex->getMessage();
-        echo "<script>console.log('Error','$msg');</script>";
+        //echo "<script>console.log('Error','$msg');</script>";
         $_SESSION["errorMsg"] = "Erreur pendant la récup du dernier index";
     }
 }

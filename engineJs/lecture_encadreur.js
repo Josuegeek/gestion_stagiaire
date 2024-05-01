@@ -2,6 +2,7 @@
 let xhr = new XMLHttpRequest();
 
 let table = document.getElementById('defaulTable');
+let STAGE_NUM = 1;
 
 if (document.getElementById("searchBtn")) {
     document.getElementById("searchBtn").addEventListener('click', () => {
@@ -31,6 +32,7 @@ xhr.onload = function () {
             tbody.innerHTML = "";
             //console.log(allEnc);
             let classi = "";
+            STAGE_NUM = Number(allEnc[allEnc.length-1].idencadreur) + 1;
             for (let i = 0; i < allEnc.length; i++) {
 
                 tbody.innerHTML += `
@@ -64,7 +66,7 @@ xhr.onload = function () {
         }
     }
     catch (e) {
-        console.log(e);
+        //console.log(e);
         alert("Erreur de lecture dans la base des données, Veuillez Actualiser la page");
     }
 
@@ -128,9 +130,9 @@ function deleteEncadreur(id) {
 }
 
 function editEncadreur(id) {
-    console.log("edit", id)
+    //console.log("edit", id)
     if (id > 0) {
-        console.log("edit", id)
+        //console.log("edit", id)
         let xhr = new XMLHttpRequest();
         // Définition de la méthode et de l'URL de la requête
         xhr.open("GET", "./enginePhp/getEncadreur.php?id=" + id, true);
@@ -142,7 +144,7 @@ function editEncadreur(id) {
             let d = JSON.parse(data);
             if (d.status == 'success') {
                 let encadreur =  d.enc;
-                console.log(encadreur)
+                //console.log(encadreur)
                 
                 document.getElementById("form-title").innerHTML = "Modifier l'encadreur";
                 document.getElementById("id").value = encadreur[0].idencadreur;

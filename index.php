@@ -21,6 +21,7 @@ include("./enginePhp/home.php");
     <!-- =============== Navigation ================ -->
     <div class="container">
         <div class="navigation">
+            <i id="closer" class="ti-close"></i>
             <ul>
                 <li>
                     <a href="#">

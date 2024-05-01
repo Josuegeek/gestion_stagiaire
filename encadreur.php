@@ -65,6 +65,7 @@
     <!-- =============== Navigation ================ -->
     <div class="container">
         <div class="navigation">
+            <i id="closer" class="ti-close"></i>
             <ul>
                 <li>
                     <a href="./index.html">
@@ -77,7 +78,7 @@
                 </li>
 
                 <li>
-                    <a href="./index.html">
+                    <a href="./index.php">
                         <span class="icon">
                             <i class="ti-home"></i>
                         </span>
@@ -136,9 +137,8 @@
             </div>
 
             <!-- ======================= Cards ================== -->
-            <div class="row mg-top w-100 center gap">
+            <div class="row mg-top w-100 center gap wrap">
                 <button onclick="showForm(0)" class="btn">Ajouter un nouveau encadreur</button>
-                <button class="btn btn-secondary">Agrandir le tableau</button>
             </div>
 
             <!-- ================ Order Details List ================= -->
